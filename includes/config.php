@@ -16,9 +16,9 @@ date_default_timezone_set('America/Los_Angeles'); #sets default date/timezone fo
  *   Contact hosting company for assistance:
  *   http://wiki.dreamhost.com/Secure_Hosting
 */
-define('VIRTUAL_PATH', 'http://example.com/retro/'); 
+define('VIRTUAL_PATH', 'http://ultan.photography/retrodiner/'); 
 
-define('PHYSICAL_PATH', '/home/horsey01/example.com/retro/'); # Physical (PHP) 'root' of application for file & upload reference
+define('PHYSICAL_PATH', '/home/jmpaddock/ultan.photography/retrodiner/'); # Physical (PHP) 'root' of application for file & upload reference
 
 # END GENERAL SETTINGS, START BOOTSTRAP CODE ---------------------------
 
@@ -47,46 +47,37 @@ header("Cache-Control: no-cache");header("Expires: -1");#Helps stop browser & pr
 # END BOOTSTRAP CODE, START SITE SPECIFIC DATA ---------------------------
 
 
-/*
+
 START PLACEMENT OF switch AND $nav1!--------------
 
 //this allows us to add unique info to our pages
 switch(THIS_PAGE)
 {
-    case "template.php":
-        $title = "My Template Title Tag";
-        $pageID = "My Template Page ID";
+    case"experiment.php":
+        $title = "My Experiment Title Tag";
+        $pageID = "My Experiment Page ID";
         break;
-        
-    case "daily.php":
-        $title = "Daily Special!";
-        $pageID = "Daily Special";
-        break;
-        
-    case "contact.php":
-        $title = "Contact Page";
-        $pageID = "Contact us!";
-        break;     
 
-    case "customers.php":
-        $title = "Title for customers page!";
-        $pageID = "Customers";
-        break;         
-
+      case"daily.php":
+        $title = "My Daily Title Tag";
+        $pageID = "My Daily Page ID";
+        break;    
+        
     default:
         $title = THIS_PAGE;
         $pageID = "Retro Diner";
+        
 }//end switch
 
-//Here are our navigation pages:
-$nav1['index.php'] = 'Home';
-$nav1['template.php'] = 'Template';
+//here are our navigation pages:
+
+$nav1['index.php'] = 'Home Page';
+$nav1['experiment.php'] = 'Home';
 $nav1['daily.php'] = 'Daily';
-$nav1['customers.php'] = 'Customers';
 $nav1['contact.php'] = 'Contact';
 
 END PLACEMENT OF switch AND $nav1!--------------
-*/
+
 
 /*
  * adminWidget allows clients to get to admin page from anywhere
